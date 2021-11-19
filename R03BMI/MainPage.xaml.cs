@@ -37,16 +37,16 @@ namespace R03BMI
                
                 if(BMI<40.00){
                     string zyoutai="肥満(3度)";
-                  }else if (BMI < 35.00)
+                  }else if (BMI<35.00)
                 {
                     string zyoutai="肥満(2度)";
-                }else if (BMI < 30.00)
+                }else if (BMI<30.00)
                 {
                     string zyoutai="肥満(1度)";
-                }else if (BMI < 25.00)
+                }else if (BMI<25.00)
                 {
                     string zyoutai="普通体重";
-                }else if (BMI < 18.50)
+                }else if (BMI<18.50)
                 {
                     string zyoutai="低体重";
                 }

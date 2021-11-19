@@ -22,12 +22,12 @@ namespace R03BMI
 
            string height = heighit.Placeholder;
             string weight = weighit.Placeholder;
-             string zyoutai="肥満(4度)";
+            
             try
             {
                 double h = double.Parse(height);
                 double w = double.Parse(weight);
-
+                string zyoutai="肥満(4度)";
                 if (h>10)
                 {
                     h = h / 100;

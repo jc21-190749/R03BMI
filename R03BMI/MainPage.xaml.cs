@@ -20,36 +20,45 @@ namespace R03BMI
         {
 
 
-           string height = heighit.Placeholder;
-            string weight = weighit.Placeholder;
+           string height = heighit.text;
+            string weight = weighit.text;
             
             try
             {
                 double h = double.Parse(height);
                 double w = double.Parse(weight);
-                string zyoutai="肥満(4度)";
+                string zyoutai;
                 if (h>10)
                 {
                     h = h / 100;
                 }
-    double BMI = w / (h * h);
-    BMI = Math.Round(BMI* 10) / 10;
-               
-                if(BMI<40.00){
-                    string zyoutai="肥満(3度)";
-                  }else if (BMI<35.00)
+                if (w>1000) {
+                   w = w/1000
+                }
+    double BMI = Math.Round( w / (h * h),1);
+              
+            if　(BMI<18.50)
                 {
-                    string zyoutai="肥満(2度)";
-                }else if (BMI<30.00)
-                {
-                    string zyoutai="肥満(1度)";
+                   zyoutai="低体重(痩せ)";
                 }else if (BMI<25.00)
                 {
-                    string zyoutai="普通体重";
-                }else if (BMI<18.50)
-                {
-                    string zyoutai="低体重";
+                   zyoutai="普通体重";
                 }
+                else if (BMI<30.00)
+                {
+                   zyoutai="肥満(1度)";
+                } 
+                else if (BMI<35.00)
+                {
+                     zyoutai="肥満(2度)";
+                }
+                else if(BMI<40.00)
+                        {
+                    zyoutai="肥満(3度)";
+                  }
+                else {
+                  zyoutai="肥満(4度)";
+                  }
                 
                 result.Text ="BMIは"+BMI+"で、体形は"+zyoutai+"す。";
             }

@@ -33,7 +33,7 @@ namespace R03BMI
                     h = h / 100;
                 }
                 if (w>1000) {
-                   w = w/1000
+                   w = w/1000;
                 }
     double BMI = Math.Round( w / (h * h),1);
               

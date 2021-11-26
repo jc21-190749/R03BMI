@@ -20,8 +20,8 @@ namespace R03BMI
         {
 
             　
-            String height = heighit.text;
-            String weight = weighit.text;
+            String height = heighit.Text;
+            String weight = weighit.Text;
             
             try
             {
